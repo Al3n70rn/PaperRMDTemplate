@@ -1,0 +1,58 @@
+---
+title: 'Basic Science-ish Report Template'
+author:
+- Joel N. K. Carlson
+- Seoul National University
+- Graduate School of Convergence Science and Technology
+date: '`r format(Sys.time(), "%a %b %d %Y")`'
+abstract:  'Absolutely the place for your abstract!'
+output:
+  pdf_document:
+    fig_caption: true
+references:    
+- id: wndchrm
+  title: Wndchrm - an open source utility for biological image analysis
+  author:
+  - family: Shamir
+    given: Lior
+  - family: Orlov
+    given: Nikita  
+  - family: Eckley
+    given: D Mark  
+  - family: Macura
+    given: Tomasz 
+  - family: Johnston
+    given: Josiah  
+  - family: G Goldberd
+    given: Ilya      
+  container-title: Source code for Biology and Medicine
+  volume: 3
+  URL: 'http://dx.doi.org/10.1186/1751-0473-3-13'
+  DOI: 10.1186/1751-0473-3-13
+  issue: 13
+  type: article-journal
+  issued:
+    year: 2008
+    month: 7
+    
+  
+---
+
+
+#Introduction
+
+Here is a reference! Raffy the Reference [@wndchrm]
+
+##Methods
+
+Hey, here is an example image! It should be in your **/figs** directory
+
+```{r fig.width=3,fig.height=3, echo=FALSE,fig.cap="Captivating info in your Caption"}
+library(png)
+library(grid)
+img <- readPNG("figs/fig1.png")
+grid.raster(img)
+``` 
+
+
+#References
